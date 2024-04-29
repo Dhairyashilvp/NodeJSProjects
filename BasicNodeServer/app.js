@@ -2,8 +2,12 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const userRoutes = require('./routes/userRoutes');
+const cors = require('cors');
 
 const app = express();
+
+// Enable CORS for all requests
+app.use(cors());
 
 app.use(bodyParser.json());
 app.use('/api', userRoutes);
