@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function() {
         })
         .then(response => response.json())
         .then(data => {
-            // Assuming the API returns a JWT token
+            // Assuming the API returns a JWT token only
             const token = data.token;
 
             // Store the token in session storage
