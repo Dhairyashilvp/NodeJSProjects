@@ -1,7 +1,6 @@
 const userService = require('../services/userService');
 
 class LoginController {
-
   // Get a single user by ID
   getUserById(req, res) {
     const userId = req.params.id;
@@ -12,7 +11,6 @@ class LoginController {
       res.json(user);
     });
   }
-  
 }
 
 module.exports = new LoginController();

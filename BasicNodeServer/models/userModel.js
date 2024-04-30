@@ -24,12 +24,11 @@ class UserModel {
   // Create a new user
   createUser(newUser, callback) {
     db.query('INSERT INTO users SET ?', newUser, (err, result) => {
-        if (err) {
-            callback(500, null, err.code);
-        }
-        else{
-            callback(201, result.affectedRows, null);
-        }
+      if (err) {
+        callback(500, null, err.code);
+      } else {
+        callback(201, result.affectedRows, null);
+      }
     });
   }
 
