@@ -1,5 +1,5 @@
-const userModel = require('../models/userModel');
 const { v4: uuidv4 } = require('uuid');
+const userModel = require('../models/userModel');
 
 class UserService {
   // Get all users

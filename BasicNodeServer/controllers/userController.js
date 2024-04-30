@@ -24,9 +24,9 @@ class UserController {
     const newUser = req.body;
     userService.createUser(newUser, (statusCode, affectedRows, error) => {
       if (statusCode === 201) {
-        res.status(statusCode).json({ message: 'Create user successful; Number of Affected Rows ' + affectedRows }); // Send the created user
+        res.status(statusCode).json({ message: `Create user successful; Number of Affected Rows ${affectedRows}` }); // Send the created user
       } else {
-        res.status(statusCode).json({ message: 'Failed to create user', error: error });
+        res.status(statusCode).json({ message: 'Failed to create user', error });
       }
     });
   }
