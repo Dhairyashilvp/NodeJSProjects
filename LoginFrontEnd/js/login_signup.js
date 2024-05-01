@@ -35,14 +35,14 @@ document.addEventListener("DOMContentLoaded", function() {
         event.preventDefault();
         
         const username = loginForm.querySelector('input[type="text"]').value;
-        const password = md5(loginForm.querySelector('input[type="password"]').value);
+        const password = (loginForm.querySelector('input[type="password"]').value);
 
         const data = {
             username: username,
             password: password // Assuming you're using the md5 library for hashing
         };
 
-        fetch('http://localhost:3000/api/login/4d1c33e5-b7dc-4814-ba35-5c72d80f8f4f', {
+        fetch('http://localhost:3000/auth/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
