@@ -2,8 +2,12 @@
   "extends": "airbnb-base",
   "rules": {
     "linebreak-style": 0,
-    "class-methods-use-this": "off",  
-    "consistent-return": "off",
-    "no-param-reassign": "off"
+    "class-methods-use-this":"off",  
+    "consistent-return":"off",
+    "no-param-reassign":"off",
+    "no-extraneous-dependencies":"off",
+    "eslint-plugin-import/no-extraneous-dependencies":"off",
+    "no-shadow":"off",
+    "max-len":"off"
   }
 }
